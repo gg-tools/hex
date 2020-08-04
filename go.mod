@@ -1,8 +1,5 @@
-module github.com/gg-tools/hashid
+module github.com/gg-tools/hex
 
 go 1.13
 
-require (
-	github.com/speps/go-hashids v2.0.0+incompatible
-	github.com/urfave/cli v1.22.4
-)
+require github.com/urfave/cli v1.22.4

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/gg-tools/hashid/commands"
+	"github.com/gg-tools/hex/commands"
 	"github.com/urfave/cli"
 	"log"
 	"os"
