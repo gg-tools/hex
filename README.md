@@ -1,10 +1,11 @@
 # Hex Tool
 
-A command line tool that convert number between different number systems.
+A command line tool that converts number between different number systems.
 
 ## Installation
 
-Make sure your go version is greater than `1.13`. And make sure Go Module is on, by setting environment variable:
+Make sure your go version is greater than `1.13`. 
+And make sure Go Module is on, by setting environment variable:
 
 ```shell
 $ export GO111MODULE=on
