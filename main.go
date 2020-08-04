@@ -13,7 +13,8 @@ func main() {
 	app.Name = "Hex"
 	app.Compiled = time.Now()
 	app.Usage = "Hex - convert between number systems"
-	app.UsageText = `hex -b 1988
+	app.UsageText = `
+hex -b 1988
 hex -o 1988
 hex -H 1988
 hex 0b110
