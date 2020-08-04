@@ -39,9 +39,11 @@ var Conversion = cli.Command{
 	Name:      "convert",
 	ShortName: "c",
 	Usage:     "convert number system",
-	UsageText: `
+	UsageText: `hex [command] -[flag] [args...]
+
 hex c -b 1988
 hex c -o 1988
+hex c -hex 1988
 hex c -H 1988
 hex c 0b110
 hex c 06
