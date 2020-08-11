@@ -4,17 +4,10 @@ A command line tool that converts number between different number systems.
 
 ## Installation
 
-Make sure your go version is greater than `1.13`. 
-And make sure Go Module is on, by setting environment variable:
+Make sure your go version is greater than `1.13`. And simply run:
 
 ```shell
-$ export GO111MODULE=on
-```
-
-And simply run:
-
-```shell
-$ go install github.com/gg-tools/hex
+$ GO111MODULE=on go get github.com/gg-tools/hex
 ```
 
 Make sure your `PATH` includes the `$GOPATH/bin` directory so commands can be easily used:
