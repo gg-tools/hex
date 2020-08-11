@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/gg-tools/hex/commands"
-	"github.com/urfave/cli"
+	"github.com/urfave/cli/v2"
 	"log"
 	"os"
 	"time"
@@ -21,7 +21,7 @@ hex -H 1988
 hex 0b110
 hex 06
 hex 0x1e`
-	app.Commands = []cli.Command{commands.Conversion}
+	app.Commands = []*cli.Command{commands.Conversion}
 	app.Action = commands.Conversion.Action
 	app.Flags = commands.Conversion.Flags
 

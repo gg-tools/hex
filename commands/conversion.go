@@ -2,7 +2,7 @@ package commands
 
 import (
 	"errors"
-	"github.com/urfave/cli"
+	"github.com/urfave/cli/v2"
 )
 
 var conversionArgs = &struct {
@@ -13,32 +13,32 @@ var conversionArgs = &struct {
 }{}
 
 var conversionFlags = []cli.Flag{
-	cli.BoolFlag{
+	&cli.BoolFlag{
 		Name:        "binary, b",
 		Usage:       "Convert to binary system",
 		Destination: &conversionArgs.binary,
 	},
-	cli.BoolFlag{
+	&cli.BoolFlag{
 		Name:        "octal, o",
 		Usage:       "Convert to octal system",
 		Destination: &conversionArgs.octal,
 	},
-	cli.BoolFlag{
+	&cli.BoolFlag{
 		Name:        "hex",
 		Usage:       "Convert to hexadecimal system",
 		Destination: &conversionArgs.hex,
 	},
-	cli.BoolFlag{
+	&cli.BoolFlag{
 		Name:        "Hex, H",
 		Usage:       "Convert to hexadecimal system (Uppercase)",
 		Destination: &conversionArgs.upperHex,
 	},
 }
 
-var Conversion = cli.Command{
-	Name:      "convert",
-	ShortName: "c",
-	Usage:     "convert number system",
+var Conversion = &cli.Command{
+	Name:    "convert",
+	Aliases: []string{"c"},
+	Usage:   "convert number system",
 	UsageText: `hex [command] -[flag] [args...]
 
 hex c -b 1988
@@ -55,7 +55,7 @@ hex c 0x1e
 			return errors.New("none number is present")
 		}
 
-		for _, v := range c.Args() {
+		for _, v := range c.Args().Slice() {
 			number, err := parseInt(v)
 			if err != nil {
 				return err
