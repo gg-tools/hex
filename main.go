@@ -17,6 +17,7 @@ func main() {
 
 hex -b 1988
 hex -o 1988
+hex -d 1988
 hex -H 1988
 hex 0b110
 hex 06

@@ -18,6 +18,10 @@ func printOctal(num int64) {
 
 }
 
+func printDecimal(num int64) {
+	printf("%d\n", num)
+}
+
 func printHex(num int64) {
 	printf("%x\n", num)
 }
